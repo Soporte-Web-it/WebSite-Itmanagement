@@ -56,7 +56,7 @@
                 class="illustration"
             />
         </div>
-        
+
     </div>
 </template>
 
@@ -100,10 +100,10 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15%; /* Espacio entre los contenedores */
+    gap: 10%; /* Espacio entre los contenedores */
     padding: 30px;
     flex-wrap: wrap;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
 }
 
 /* Ajustes de la imagen */
@@ -120,15 +120,16 @@ onMounted(() => {
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 2.5rem;
+  font-weight: 500;
   margin-bottom: 20px;
   font-family: var(--font-family2);
+  color: var(--color2);
 }
 
 .description {
   font-size: 18px;
-  color: var(--color3);
+  /* color: var(--color3); */
   text-align: justify;
   font-family: var(--font-family1);
   margin-bottom: 30px; /* Más separación con las barras */
@@ -172,7 +173,7 @@ svg {
   font-size: 20px;
   font-weight: bold;
   fill: #333;
-  font-family: var(--font-family2);
+  font-family: var(--font-family1);
 }
 
 /* Color de las barras */

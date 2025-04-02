@@ -2,7 +2,7 @@
   <div class="parent">
     <div class="div1" data-aos="fade-right">
       <img
-        src="../assets/images/ilustrations/ilustrationBanner.png"
+        src="https://placehold.co/400x300?text=Ilustration"
         alt="Illustration Image"
         class="ilustrationContain"
       />
@@ -12,16 +12,9 @@
       <h2 class="titleContain">IT MANAGEMENT ZOMAC S.A.S</h2>
 
       <h3 class="ContainInformation">
-        IT MANAGEMENT ZOMAC S.A.S es una empresa que desarrolla actividades conjuntas que permitan
-        al grupo empresarial M.O.M garantizar la continuidad de su desarrollo en los cuales
-        intervienen los procesos gerenciales, contables, financieros, jurídicos, ingeniería y
-        talento, sirviendo como apoyo en las operaciones administrativas y asistenciales.
-        
-        <br>
-
-        De igual forma IT MANAGMENT ZOMAC S.A.S busca desarrollar y/o actualizar los sistemas y procesos que
-        soportan las áreas asistenciales y administrativas en las nuevas unidades de negocios y
-        centros de operación.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptates deserunt labore
+        perferendis vel fugiat ipsa inventore. Dolores blanditiis odio eaque similique, soluta dicta
+        ratione perspiciatis velit, eligendi ipsam debitis?
       </h3>
     </div>
   </div>
@@ -40,7 +33,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  background-color: var(--color1);
+  /* background-color: var(--color1); */
   padding: 20px;
 }
 
@@ -54,11 +47,10 @@ export default {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  
 }
 
 .div2 {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,7 +61,7 @@ export default {
 
 .ContainInformation {
   width: 100%;
-  color: var(--color3);
+  /* color: var(--color3); */
   font-family: var(--font-family1);
   font-weight: 300;
   margin-top: 10px;
@@ -79,8 +71,8 @@ export default {
 
 .titleContain {
   width: 100%;
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 2.5rem;
+  font-weight: 500;
   font-family: var(--font-family2);
   color: var(--color2);
   text-align: left;
@@ -101,7 +93,7 @@ export default {
   .titleContain {
     text-align: center;
   }
-  
+
   .ContainInformation {
     text-align: justify;
   }

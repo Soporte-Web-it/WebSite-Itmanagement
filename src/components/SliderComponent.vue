@@ -36,7 +36,7 @@
     </div>
 
 </template>
-  
+
 <script setup>
 
     import { ref } from "vue";
@@ -94,55 +94,55 @@
     ]);
 
 </script>
-  
+
 <style scoped>
 
 .slider-section {
-    height: 40vh;
-    text-align: center;
-    padding: 20px 0;
-    background-color: var(--color1);
+  height: 30vh;
+  text-align: center;
+  padding: 20px 0;
+  /* background-color: var(--color4); */
 }
 
 .slider-title {
-    font-weight: 400;
-    margin-bottom: 15px;
-    font-size: 2rem;
-    color: var(--color2);
-    font-family: var(--font-family2);
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  color: var(--color2);
+  font-family: var(--font-family2);
 }
 
 .slider-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 20px 0;
+  display: flex;
+  width: 100%;
+  margin-top: 3%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 .mySwiper {
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .slide-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 120px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.30);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur( 2px);
-    transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: var(--color1);
+  box-shadow: 10px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .slide:hover {
@@ -150,15 +150,15 @@
 }
 
 .logo-image {
-    width: 220px;
+    width: 200px;
     height: auto;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     transition: filter 0.3s ease;
 }
 
-.slide:hover .logo-image {
+/* .slide:hover .logo-image {
     filter: grayscale(0%);
-}
+} */
 
 /* Ajuste para pantallas pequeñas */
 @media (max-width: 768px) {

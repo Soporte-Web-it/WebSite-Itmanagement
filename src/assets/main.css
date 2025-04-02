@@ -1,19 +1,30 @@
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
 :root {
 
-    --font-family1: "Montserrat", sans-serif;
-    --font-family2: "Signika Negative", sans-serif;
+  --font-family1: "Montserrat", sans-serif;
+  --font-family2: "Signika Negative", sans-serif;
 
-    --color1: #ffffff;
-    --color2: #E5322C;
-    --color3: #333333;
-    --color4: #000000;
-    --color6: #FAFAFA;
-    --color7: #F37321;
+  --color1: #ffffff;
+  --color2: #E5322C;
+  --color3: #333333;
+  --color4: #000000;
+  --color6: #FAFAFA;
+  --color7: #F37321;
 
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--color4);
+}
+
+body::-webkit-scrollbar-thumb {
+
+  background-color: var(--color2);
+  border-radius: 50px;
 }

@@ -1,44 +1,44 @@
 <template>
-    <section class="sectionHeader">
+  <section class="sectionHeader">
 
-        <div class="containLogo">
+      <div class="containLogo">
 
-            <router-link to="/" class="refLogo">
+          <router-link to="/" class="refLogo">
 
-                <img class="imageLogo" src="../assets/images/logos/IT.png" alt="Company Logo">
+              <img class="imageLogo" src="../assets/images/logos/IT.png" alt="Company Logo">
 
-            </router-link>
+          </router-link>
 
-        </div>
+      </div>
 
-        <div class="containNav">
+      <div class="containNav">
 
-            <router-link to="/" class="itemNav"><i class='bx bx-home-alt'></i><span>Inicio</span></router-link>
-            <router-link to="/nosotros" class="itemNav"><i class='bx bx-group'></i><span>Nosotros</span></router-link>
-            <router-link to="/contacto" class="itemNav"><i class='bx bx-phone'></i><span>Contacto</span></router-link>
-            <router-link to="/servicios" class="itemNav"><i class='bx bx-server'></i><span>Servicios</span></router-link>
-            
-        </div>
+          <router-link to="/" class="itemNav"><i class='bx bx-home-alt'></i><span>Inicio</span></router-link>
+          <router-link to="/nosotros" class="itemNav"><i class='bx bx-group'></i><span>Nosotros</span></router-link>
+          <router-link to="/contacto" class="itemNav"><i class='bx bx-phone'></i><span>Contacto</span></router-link>
+          <router-link to="/servicios" class="itemNav"><i class='bx bx-server'></i><span>Servicios</span></router-link>
 
-        <button class="menuToggle" @click="toggleMenu" v-if="isMobile">
+      </div>
 
-            <i class='bx bx-menu'></i>
+      <button class="menuToggle" @click="toggleMenu" v-if="isMobile">
 
-        </button>
+          <i class='bx bx-menu'></i>
 
-    </section>
-    
-    <div v-if="isMenuOpen && isMobile" class="overlay" @click="toggleMenu"></div>
-    
-    <div class="mobileNav" :class="{ 'active': isMenuOpen }" v-if="isMobile">
+      </button>
 
-        <button class="closeMenu" @click="toggleMenu">&times;</button>
-        <router-link to="/" class="itemNav" @click="toggleMenu"><i class='bx bx-home-alt'></i><span>Inicio</span></router-link>
-        <router-link to="/nosotros" class="itemNav" @click="toggleMenu"><i class='bx bx-group'></i><span>Nosotros</span></router-link>
-        <router-link to="/contacto" class="itemNav" @click="toggleMenu"><i class='bx bx-phone'></i><span>Contacto</span></router-link>
-        <router-link to="/servicios" class="itemNav" @click="toggleMenu"><i class='bx bx-server'></i><span>Servicios</span></router-link>
+  </section>
 
-    </div>
+  <div v-if="isMenuOpen && isMobile" class="overlay" @click="toggleMenu"></div>
+
+  <div class="mobileNav" :class="{ 'active': isMenuOpen }" v-if="isMobile">
+
+      <button class="closeMenu" @click="toggleMenu">&times;</button>
+      <router-link to="/" class="itemNav" @click="toggleMenu"><i class='bx bx-home-alt'></i><span>Inicio</span></router-link>
+      <router-link to="/nosotros" class="itemNav" @click="toggleMenu"><i class='bx bx-group'></i><span>Nosotros</span></router-link>
+      <router-link to="/contacto" class="itemNav" @click="toggleMenu"><i class='bx bx-phone'></i><span>Contacto</span></router-link>
+      <router-link to="/servicios" class="itemNav" @click="toggleMenu"><i class='bx bx-server'></i><span>Servicios</span></router-link>
+
+  </div>
 
 </template>
 
@@ -66,15 +66,17 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+
 .sectionHeader {
     width: 100%;
     height: 5rem;
     display: flex;
-    background-color: var(--color1);
+    background-color: transparent;
     justify-content: space-evenly;
     align-items: center;
     padding: 0 40px;
-    position: relative;
+    position: absolute;
+    z-index: 10000;
 }
 
 .refLogo {
@@ -87,6 +89,7 @@ onUnmounted(() => {
 
 .imageLogo {
     display: flex;
+    height: 4rem;
     background-size: contain;
 }
 
@@ -101,16 +104,17 @@ onUnmounted(() => {
     text-decoration: none;
     font-family: var(--font-family1);
     font-weight: 500;
-    color: var(--color2);
+    color: var(--color1);
     transition-duration: .5s;
     font-size: 18px;
     display: flex;
     align-items: center;
     gap: 8px;
+    z-index: 11000;
 }
 
 .itemNav:hover {
-    color: var(--color4);
+    color: var(--color2);
 }
 
 .menuToggle, .closeMenu {
@@ -119,7 +123,7 @@ onUnmounted(() => {
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: var(--color2);
+    color: var(--color1);
 }
 
 .overlay {
@@ -140,14 +144,14 @@ onUnmounted(() => {
     right: -100%;
     width: 250px;
     height: 100vh;
-    background-color: var(--color6);
+    background-color: var(--color2);
     justify-content: flex-start;
     align-items: flex-start;
     padding: 20px;
     transition: right 0.3s ease-in-out;
-    z-index: 10;
+    z-index: 12000;
 }
-    
+
 .mobileNav.active {
     right: 0;
     display: flex;
@@ -168,11 +172,11 @@ onUnmounted(() => {
     .containNav {
         display: none;
     }
-    
+
     .menuToggle {
         display: block;
     }
-    
+
     .closeMenu {
         display: block;
         position: absolute;
