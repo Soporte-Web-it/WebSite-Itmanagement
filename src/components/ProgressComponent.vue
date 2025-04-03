@@ -51,7 +51,7 @@
 
         <div class="div1" data-aos="fade-left">
             <img
-                src="https://placehold.co/400x300?text=Illustration"
+                src="https://placehold.co/400x300?text=Ilustration"
                 alt="Illustration"
                 class="illustration"
             />

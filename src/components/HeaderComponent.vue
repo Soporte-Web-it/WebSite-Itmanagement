@@ -83,6 +83,7 @@ export default {
   .parent {
     grid-template-columns: 1fr;
     min-height: auto; /* Permite que el contenedor crezca con el contenido */
+    height: 120vh;
   }
 
   .div1,

@@ -1,13 +1,19 @@
 <template>
+
   <NavBar />
+
   <!-- Ícono para alternar el tema -->
+
   <div @click="toggleTheme" class="theme-toggle">
     <i :class="isDark ? 'fas fa-sun' : 'fas fa-moon'" class="theme-icon"></i>
   </div>
+
   <router-view :key="$route.fullPath" />
+
 </template>
 
 <script setup>
+
 import NavBar from '@/components/NavBar.vue';
 import { ref, onMounted, onUnmounted } from "vue";
 

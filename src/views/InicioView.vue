@@ -8,11 +8,15 @@
 
   <SliderComponent/>
 
-  <CardsComponent/>
+  <SelectionComponent/>
 
   <HeaderComponent/>
 
   <ProgressComponent/>
+
+  <GoogleMapsFormComponent/>
+
+  <FooterComponent/>
 
 </template>
 
@@ -20,14 +24,18 @@
 
 // import HeaderBackground from '@/components/HeaderBackground.vue';
 
-import HeaderComponent from '@/components/HeaderComponent.vue';
+import HeaderVideo from '@/components/HeaderVideo.vue';
 
 import SliderComponent from '@/components/SliderComponent.vue';
 
+import HeaderComponent from '@/components/HeaderComponent.vue';
+
 import ProgressComponent from '@/components/ProgressComponent.vue';
 
-import HeaderVideo from '@/components/HeaderVideo.vue';
+import SelectionComponent from '@/components/SelectionComponent.vue';
 
-import CardsComponent from '@/components/CardsComponent.vue';
+import GoogleMapsFormComponent from '@/components/GoogleMapsFormComponent.vue';
+
+import FooterComponent from '@/components/FooterComponent.vue';
 
 </script>
