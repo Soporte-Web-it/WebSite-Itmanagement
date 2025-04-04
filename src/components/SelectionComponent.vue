@@ -21,7 +21,6 @@
             alt="Hardware"
             class="illustration"
           />
-
           <p class="description-text">
             Suministro, configuración y mantenimiento de infraestructura tecnológica de alto
             rendimiento. Ofrecemos estaciones de trabajo, redes estructuradas y dispositivos
@@ -36,7 +35,6 @@
             alt="Software"
             class="illustration"
           />
-
           <p class="description-text">
             Desarrollo e implementación de soluciones a medida, incluyendo software empresarial,
             integración de sistemas, automatización de procesos y ciberseguridad. Optimizamos la
@@ -51,7 +49,6 @@
             alt="Administrativo"
             class="illustration"
           />
-
           <p class="description-text">
             Digitalización y optimización de procesos administrativos mediante ERP y herramientas de
             gestión documental. Implementamos soluciones para mejorar la eficiencia operativa,
@@ -76,14 +73,16 @@ export default {
 
 <style scoped>
 .wrapper {
-  height: 40vh;
+  width: 100%;
+  min-height: auto;
+  padding: 40px 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 900px;
   text-align: center;
   font-family: var(--font-family1);
 }
@@ -98,6 +97,7 @@ export default {
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
@@ -124,51 +124,53 @@ button:hover {
 }
 
 .content {
-  /* background: #f9f9f9; */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
+/* Ajuste para centrar imágenes en pantallas grandes */
 .description-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   text-align: left;
+  flex-wrap: wrap;
 }
 
+/* Tamaño uniforme para todas las ilustraciones */
 .illustration {
   width: 100%;
-  max-width: 200px;
+  max-width: 300px;
+  height: auto;
   border-radius: 10px;
 }
 
+/* Ajuste de texto */
 .description-text {
-  display: flex;
   text-align: justify;
   font-family: var(--font-family1);
   font-size: 16px;
+  max-width: 500px;
 }
 
-@media (max-width: 480px) {
-  .container {
-    height: 80vh;
-  }
-
-  .buttons {
-    flex-direction: column;
-    margin-left: 10%;
-    width: 80%;
-  }
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
   .description-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .wrapper {
-    height: 80vh;
+  .illustration {
+    max-width: 250px;
+  }
+
+  .description-text {
+    max-width: 100%;
   }
 }
 </style>

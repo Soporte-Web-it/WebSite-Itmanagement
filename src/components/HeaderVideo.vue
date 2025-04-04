@@ -22,7 +22,7 @@
       <div class="text-container">
         <h1 class="title-videoComponent">IT MANAGEMENT ZOMAC S.A.S</h1>
         <p>
-          Es una empresa que desarrolla actividades conjuntas que permitan
+          Empresa que desarrolla actividades conjuntas que permitan
           al grupo empresarial M.O.M garantizar la continuidad de su desarrollo en los cuales
           intervienen los procesos gerenciales, contables, financieros, jurídicos, ingeniería y
           talento, sirviendo como apoyo en las operaciones administrativas y asistenciales.

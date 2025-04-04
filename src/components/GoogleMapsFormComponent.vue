@@ -16,21 +16,16 @@
         <form @submit.prevent="enviarFormulario">
           <label class="form-label">Nombre:</label>
           <input type="text" v-model="form.nombre" class="form-input" required />
-
           <label class="form-label">Email:</label>
           <input type="email" v-model="form.email" class="form-input" required />
-
           <label class="form-label">Teléfono:</label>
           <input type="tel" v-model="form.telefono" class="form-input" required />
-
           <label class="form-label">Comentario:</label>
           <textarea v-model="form.comentario" class="form-input" required></textarea>
-
           <div class="form-checkbox">
             <input type="checkbox" id="politicas" v-model="form.politicas" required />
             <label for="politicas" class="form-label">Aceptar políticas de privacidad</label>
           </div>
-
           <button type="submit" class="form-button">Enviar</button>
         </form>
         <p v-if="mensaje" class="mensaje">{{ mensaje }}</p>
@@ -66,9 +61,7 @@ export default {
           body: new URLSearchParams(this.form).toString()
         });
 
-        if (!response.ok) {
-          throw new Error("Error en la respuesta del servidor");
-        }
+        if (!response.ok) throw new Error("Error en el servidor");
 
         const data = await response.json();
         this.mensaje = data.message || "Formulario enviado correctamente";
@@ -84,9 +77,7 @@ export default {
 .parent-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 80vh;
   padding: 20px;
 }
 
@@ -96,20 +87,20 @@ export default {
   text-align: center;
   font-family: var(--font-family2);
   color: var(--color2);
-  font-weight: 500;
 }
 
 .map-container {
-  width: 80%;
-  height: 55vh;
-  position: relative;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
 }
 
 .map-wrapper {
-  flex: 1;
-  height: 100%;
+  flex: 1 1 60%;
+  min-width: 300px;
+  height: 55vh;
 }
 
 .google-map {
@@ -119,15 +110,12 @@ export default {
 }
 
 .form-container {
-  width: 30%;
-  background: rgba(255, 255, 255, 0.95);
+  flex: 1 1 35%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
   padding: 20px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-title {
@@ -136,17 +124,14 @@ export default {
   color: var(--color2);
   font-family: var(--font-family2);
   text-align: center;
-  font-weight: 500;
 }
 
 .form-label {
   font-size: 1rem;
-  font-weight: bold;
   color: var(--color2);
-  display: block;
   margin-bottom: 5px;
+  display: block;
   font-family: var(--font-family2);
-  font-weight: 400;
 }
 
 .form-input {
@@ -156,7 +141,6 @@ export default {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  transition: border 0.3s;
 }
 
 .form-input:focus {
@@ -180,7 +164,6 @@ export default {
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 .form-button:hover {
@@ -195,23 +178,19 @@ export default {
 }
 
 @media (max-width: 768px) {
-
-  .parent-container {
-    height: 120vh;
-  }
-
   .map-container {
     flex-direction: column;
+  }
+
+  .map-wrapper,
+  .form-container {
+    width: 100%;
     height: auto;
   }
 
   .form-container {
-    position: static;
-    width: 100%;
-    height: auto;
     box-shadow: none;
     margin-top: 10px;
-    padding: 15px;
   }
 }
 </style>

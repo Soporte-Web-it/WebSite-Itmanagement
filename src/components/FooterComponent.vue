@@ -8,8 +8,7 @@
           </router-link>
         </div>
         <p class="description">
-          A descriptive paragraph that tells clients how good you are and proves that you are the
-          best choice.
+          Compañia prestadora de servicios administrativos e integrales
         </p>
       </div>
       <div class="footer-section">
