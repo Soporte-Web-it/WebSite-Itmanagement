@@ -4,7 +4,7 @@
       <div class="footer-section logo-section">
         <div class="containLogo">
           <router-link to="/" class="refLogo">
-            <img class="imageLogo" src="../assets/images/logos/IT.png" alt="Company Logo" />
+            <img class="imageLogo" src="../assets/images/logos/IT BLANCO.png" alt="Company Logo" />
           </router-link>
         </div>
         <p class="description">
@@ -12,25 +12,27 @@
         </p>
       </div>
       <div class="footer-section">
-        <h3>Our Company</h3>
+        <h3>Nuestra empresa</h3>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><router-link to="/" class="itemNav"><span>Inicio</span></router-link></li>
+          <li><router-link to="/nosotros" class="itemNav"><span>Nosotros</span></router-link></li>
+          <li><router-link to="/contacto" class="itemNav"><span>Contacto</span></router-link></li>
+          <li><router-link to="/servicios" class="itemNav"><span>Servicios</span></router-link></li>
         </ul>
       </div>
-      <div class="footer-section">
-        <h3>Get In Touch</h3>
+
+      <!-- <div class="footer-section">
+        <h3>¡Conoce más!</h3>
         <ul>
           <li><a href="#">LinkedIn</a></li>
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Yelp</a></li>
           <li><a href="#">Houzz</a></li>
         </ul>
-      </div>
+      </div> -->
+
       <div class="footer-section">
-        <h3>Contact Info</h3>
+        <h3>Información de contacto</h3>
         <p>Calle 3a N° 9 - 01 San Pedro. Hobo, Huila (Colombia)</p>
         <p>316 742 0491</p>
         <p class="email"><a href="mailto:contact@example.com">recepcion@itmsas.net</a></p>
@@ -38,7 +40,7 @@
     </div>
     <div class="footer-bottom">
       <p>Copyright © 2025 IT MANAGEMENT ZOMAC S.A.S</p>
-      <p>Powered by Sebastían Gomez</p>
+      <p>Powered by Sebastían Gómez</p>
     </div>
   </footer>
 </template>

@@ -18,7 +18,9 @@
 
 </template>
 
+
 <script setup>
+
 import NavBar from '@/components/NavBar.vue';
 import { ref, onMounted, onUnmounted } from "vue";
 
@@ -41,7 +43,7 @@ const handleBlur = () => {
 };
 
 const handleFocus = () => {
-  document.title = "Tu sitio"; // Puedes cambiar por tu título predeterminado
+  document.title = "IT MANAGEMENT ZOMAC S.A.S"; // Puedes cambiar por tu título predeterminado
 };
 
 onMounted(() => {
@@ -64,8 +66,10 @@ const loading = ref(true);
 onMounted(() => {
   setTimeout(() => {
     loading.value = false;
-  }, 1500); // simula carga durante 1.5 segundos
+  }, 1000); // simula carga durante 1.5 segundos
 });
+
+console.log("Powered By: Sebastián Gómez") // Developer Software Jr
 
 </script>
 
@@ -201,5 +205,12 @@ body {
   50% { opacity: 0.4; }
 }
 
+@media (max-width: 768px) {
+
+  .loader-text {
+    text-align: center;
+  }
+
+}
 
 </style>

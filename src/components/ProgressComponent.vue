@@ -40,7 +40,7 @@
 
     <div class="div1" data-aos="fade-left">
       <img
-        src="https://placehold.co/400x300?text=Ilustration"
+        src="../assets/images/ilustrations/undraw_ideas-flow.svg"
         alt="Illustration"
         class="illustration"
       />

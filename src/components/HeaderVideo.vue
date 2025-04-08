@@ -6,7 +6,7 @@
       <div class="overlay"></div>
 
       <video autoplay loop muted>
-        <source src="../assets/videos/bgOne.mp4" type="video/mp4" />
+        <source src="../assets/videos/bgThree.mp4" type="video/mp4" />
       </video>
 
     </div>
@@ -160,6 +160,12 @@ export default {
 
   .text-container p {
     font-size: 0.9rem;
+  }
+
+  .title-videoComponent {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 </style>

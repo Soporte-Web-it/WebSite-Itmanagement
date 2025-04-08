@@ -40,8 +40,9 @@ import lg3 from '@/assets/images/logos/CFIM.png'
 import lg4 from '@/assets/images/logos/CLÍNICA.png'
 import lg5 from '@/assets/images/logos/CORPOMEDICAL.png'
 import lg6 from '@/assets/images/logos/FUNDACION.png'
+import lg7 from '@/assets/images/logos/INPROMEDIQ.png'
 
-const logos = ref([lg1, lg2, lg3, lg4, lg5, lg6])
+const logos = ref([lg1, lg2, lg3, lg4, lg5, lg6, lg7])
 </script>
 
 <style scoped>

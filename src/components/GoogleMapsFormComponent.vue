@@ -87,6 +87,7 @@ export default {
   text-align: center;
   font-family: var(--font-family2);
   color: var(--color2);
+  font-weight: 500;
 }
 
 .map-container {

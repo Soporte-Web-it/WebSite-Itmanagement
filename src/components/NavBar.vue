@@ -1,5 +1,5 @@
 <template>
-  <section class="sectionHeader">
+  <section class="sectionHeader" :class="{ scrolled: isScrolled }">
     <div class="containLogo">
       <router-link to="/" class="refLogo">
         <img class="imageLogo" src="../assets/images/logos/IT.png" alt="Company Logo" />
@@ -34,6 +34,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 const isMenuOpen = ref(false);
 const isMobile = ref(window.innerWidth <= 1024);
+const isScrolled = ref(false);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
@@ -44,8 +45,19 @@ const updateScreenSize = () => {
   if (!isMobile.value) isMenuOpen.value = false;
 };
 
-onMounted(() => window.addEventListener('resize', updateScreenSize));
-onUnmounted(() => window.removeEventListener('resize', updateScreenSize));
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+};
+
+onMounted(() => {
+  window.addEventListener('resize', updateScreenSize);
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateScreenSize);
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style scoped>
@@ -53,12 +65,20 @@ onUnmounted(() => window.removeEventListener('resize', updateScreenSize));
   width: 100%;
   height: 5rem;
   display: flex;
-  background-color: transparent;
   justify-content: space-evenly;
   align-items: center;
   padding: 0 20px;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 10000;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sectionHeader.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .refLogo {
@@ -75,7 +95,7 @@ onUnmounted(() => window.removeEventListener('resize', updateScreenSize));
 
 .containNav {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -92,7 +112,7 @@ onUnmounted(() => window.removeEventListener('resize', updateScreenSize));
 }
 
 .itemNav:hover {
-  color: var(--color2);
+  color: var(--color3);
 }
 
 .menuToggle, .closeMenu {
@@ -136,6 +156,20 @@ onUnmounted(() => window.removeEventListener('resize', updateScreenSize));
   gap: 12px;
 }
 
+.sectionHeader.scrolled .itemNav {
+  color: var(--color3); /* Por ejemplo, un gris oscuro o negro */
+}
+
+.sectionHeader.scrolled .itemNav:hover {
+  color: var(--color3);
+}
+
+.sectionHeader.scrolled .menuToggle,
+.sectionHeader.scrolled .closeMenu {
+  color: var(--color2);
+}
+
+
 @media (max-width: 1024px) {
   .containNav {
     display: none;
@@ -143,6 +177,8 @@ onUnmounted(() => window.removeEventListener('resize', updateScreenSize));
 
   .menuToggle {
     display: block;
+    position: absolute;
+    left: 80%;
   }
 
   .closeMenu {
@@ -151,5 +187,12 @@ onUnmounted(() => window.removeEventListener('resize', updateScreenSize));
     top: 15px;
     right: 20px;
   }
+
+  .refLogo {
+    position: absolute;
+    left: 10%;
+    top: 0%;
+  }
 }
 </style>
+

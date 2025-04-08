@@ -6,13 +6,13 @@
 
   <HeaderVideo/>
 
-  <SliderComponent/>
-
   <SelectionComponent/>
 
   <HeaderComponent/>
 
   <ProgressComponent/>
+
+  <SliderComponent/>
 
   <GoogleMapsFormComponent/>
 
@@ -26,13 +26,13 @@
 
 import HeaderVideo from '@/components/HeaderVideo.vue';
 
-import SliderComponent from '@/components/SliderComponent.vue';
+import SelectionComponent from '@/components/SelectionComponent.vue';
 
 import HeaderComponent from '@/components/HeaderComponent.vue';
 
 import ProgressComponent from '@/components/ProgressComponent.vue';
 
-import SelectionComponent from '@/components/SelectionComponent.vue';
+import SliderComponent from '@/components/SliderComponent.vue';
 
 import GoogleMapsFormComponent from '@/components/GoogleMapsFormComponent.vue';
 

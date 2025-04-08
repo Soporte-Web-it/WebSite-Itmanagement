@@ -64,7 +64,7 @@
 export default {
   data() {
     return {
-      selected: 0,
+      selected: 1,
       categories: ['Hardware', 'Software', 'Administrativo'],
     }
   },
