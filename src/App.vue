@@ -1,4 +1,5 @@
 <template>
+
   <NavBar />
 
   <!-- Ícono para alternar el tema -->
@@ -92,7 +93,7 @@ html, body {
 
 /* Tema oscuro */
 .dark-mode {
-  --bg-color: #545353;
+  --bg-color: #6C6C6C;
   --text-color: white;
 }
 

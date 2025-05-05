@@ -167,5 +167,6 @@ export default {
     justify-content: center;
     text-align: center;
   }
+  
 }
 </style>

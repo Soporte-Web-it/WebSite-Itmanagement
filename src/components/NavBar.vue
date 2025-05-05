@@ -140,7 +140,7 @@ onUnmounted(() => {
   right: -100%;
   width: 250px;
   height: 100vh;
-  background-color: var(--color2);
+  background-color: var(--color3);
   padding: 20px;
   transition: right 0.3s ease-in-out;
   z-index: 12000;

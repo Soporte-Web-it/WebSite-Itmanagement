@@ -1,8 +1,12 @@
 <template>
+  <!-- Pie de página principal -->
   <footer class="footer">
     <div class="container">
+
+      <!-- Sección del logo y descripción -->
       <div class="footer-section logo-section">
         <div class="containLogo">
+          <!-- Enlace al inicio con el logo -->
           <router-link to="/" class="refLogo">
             <img class="imageLogo" src="../assets/images/logos/IT BLANCO.png" alt="Company Logo" />
           </router-link>
@@ -11,6 +15,8 @@
           Compañia prestadora de servicios administrativos e integrales
         </p>
       </div>
+
+      <!-- Navegación interna -->
       <div class="footer-section">
         <h3>Nuestra empresa</h3>
         <ul>
@@ -21,7 +27,9 @@
         </ul>
       </div>
 
-      <!-- <div class="footer-section">
+      <!--  Sección de enlaces sociales (comentada, puede activarse si se necesita) -->
+      <!--
+      <div class="footer-section">
         <h3>¡Conoce más!</h3>
         <ul>
           <li><a href="#">LinkedIn</a></li>
@@ -29,32 +37,37 @@
           <li><a href="#">Yelp</a></li>
           <li><a href="#">Houzz</a></li>
         </ul>
-      </div> -->
+      </div>
+      -->
 
+      <!-- Información de contacto -->
       <div class="footer-section">
         <h3>Información de contacto</h3>
-        <p>Calle 3a N° 9 - 01 San Pedro. Hobo, Huila (Colombia)</p>
-        <p>316 742 0491</p>
+        <p class="itfooter">Calle 3a N° 9 - 01 San Pedro. Hobo, Huila (Colombia)</p>
+        <p class="itfooter">316 742 0491</p>
         <p class="email"><a href="mailto:contact@example.com">recepcion@itmsas.net</a></p>
       </div>
     </div>
+
+    <!-- Parte inferior del footer con derechos de autor -->
     <div class="footer-bottom">
       <p>Copyright © 2025 IT MANAGEMENT ZOMAC S.A.S</p>
-      <p>Powered by Sebastían Gómez</p>
+      <!-- <p>Powered by Sebastían Gómez</p> -->
     </div>
   </footer>
 </template>
 
 <style scoped>
-/* Estilos generales del footer */
+/* Estilos del footer */
 .footer {
   background-color: var(--color3);
+  border-radius: 2rem 2rem 0 0;
   color: #fff;
   padding: 40px 20px;
   text-align: center;
 }
 
-/* Contenedor principal */
+/* Contenedor general del contenido */
 .container {
   display: flex;
   justify-content: space-between;
@@ -63,7 +76,7 @@
   flex-wrap: wrap;
 }
 
-/* Secciones individuales */
+/* Sección del footer individual (logo, links, info) */
 .footer-section {
   width: 23%;
   font-family: var(--font-family1);
@@ -83,34 +96,41 @@
   height: auto;
 }
 
-/* Descripción */
+/* Descripción corta */
 .description {
   font-size: 14px;
   margin-top: 10px;
 }
 
-/* Estilos del email */
+/* Estilo para el email */
 .email a {
   display: flex;
   text-decoration: none;
   color: var(--color1);
   justify-content: center;
+  padding-top: 15px;
 }
 
-/* Títulos de secciones */
+.itfooter {
+  margin-top: 15px;
+}
+
+/* Títulos de cada bloque */
 h3 {
   font-size: 16px;
   margin-bottom: 10px;
 }
 
-/* Listas */
+/* Listado de navegación */
 ul {
   list-style: none;
   padding: 0;
+  text-decoration: none;
 }
 
 ul li {
   margin-bottom: 8px;
+  text-decoration: none;
 }
 
 ul li a {
@@ -120,10 +140,10 @@ ul li a {
 }
 
 ul li a:hover {
-  text-decoration: underline;
+  color: var(--color2); /* Color de acento al pasar el mouse */
 }
 
-/* Parte inferior del footer */
+/* Pie inferior del footer */
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
@@ -133,9 +153,9 @@ ul li a:hover {
   font-family: var(--font-family1);
 }
 
-/* 🔹 MEDIA QUERIES para Responsive Design */
+/* Media Queries para dispositivos móviles y tablets */
 
-/* Tablets (pantallas menores a 1024px) */
+/* Tablets */
 @media (max-width: 1024px) {
   .container {
     flex-wrap: wrap;
@@ -153,7 +173,7 @@ ul li a:hover {
   }
 }
 
-/* Móviles (pantallas menores a 768px) */
+/* Móviles */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;

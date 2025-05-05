@@ -79,15 +79,17 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  min-height: 80vh;
 }
 
 .parent-title {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 30px;
   text-align: center;
   font-family: var(--font-family2);
   color: var(--color2);
-  font-weight: 500;
+  text-shadow: 0 0 10px rgba(229, 50, 44, 0.6);
+  font-weight: 600;
 }
 
 .map-container {
@@ -124,7 +126,9 @@ export default {
   margin-bottom: 15px;
   color: var(--color2);
   font-family: var(--font-family2);
+  text-shadow: 0 0 10px rgba(229, 50, 44, 0.6);
   text-align: center;
+  font-weight: 500;
 }
 
 .form-label {
@@ -142,6 +146,7 @@ export default {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  resize: none;
 }
 
 .form-input:focus {
@@ -192,6 +197,10 @@ export default {
   .form-container {
     box-shadow: none;
     margin-top: 10px;
+  }
+
+  .parent-title {
+    font-size: 2rem;
   }
 }
 </style>

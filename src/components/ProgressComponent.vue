@@ -132,11 +132,12 @@ onUnmounted(() => {
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 3.5rem;
+  font-weight: 600;
   margin-bottom: 20px;
   font-family: var(--font-family2);
   color: var(--color2);
+  text-shadow: 0 0 10px rgba(229, 50, 44, 0.6);
 }
 
 .description {
@@ -208,6 +209,10 @@ circle[stroke] {
   .progress-wrapper {
     flex-direction: column;
     align-items: center;
+  }
+
+  .title {
+    font-size: 2rem;
   }
 }
 </style>

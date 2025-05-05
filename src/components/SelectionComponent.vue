@@ -14,48 +14,39 @@
         </button>
       </div>
 
-      <div v-if="selected !== null" class="content">
-        <div v-show="selected === 0" class="description-container">
-          <img
-            src="../assets/images/ilustrations/undraw_server-cluster.svg"
-            alt="Hardware"
-            class="illustration"
-          />
-          <p class="description-text">
-            Suministro, configuración y mantenimiento de infraestructura tecnológica de alto
-            rendimiento. Ofrecemos estaciones de trabajo, redes estructuradas y dispositivos
-            periféricos con soporte técnico especializado para garantizar continuidad operativa y
-            seguridad.
-          </p>
-        </div>
+      <transition name="fade" mode="out-in">
+        <div v-if="selected !== null" key="selected-content" class="content">
+          <div v-show="selected === 0" class="description">
+            <img src="../assets/images/ilustrations/undraw_server-cluster.svg" alt="Hardware" />
+            <div class="text">
+              <h2>Hardware de Alto Rendimiento</h2>
+              <p>
+                Estaciones de trabajo, redes estructuradas y dispositivos periféricos. Suministro y mantenimiento con soporte especializado para garantizar continuidad y seguridad.
+              </p>
+            </div>
+          </div>
 
-        <div v-show="selected === 1" class="description-container">
-          <img
-            src="../assets/images/ilustrations/undraw_team.svg"
-            alt="Software"
-            class="illustration"
-          />
-          <p class="description-text">
-            Desarrollo e implementación de soluciones a medida, incluyendo software empresarial,
-            integración de sistemas, automatización de procesos y ciberseguridad. Optimizamos la
-            operatividad con aplicaciones escalables y adaptadas a las necesidades específicas de tu
-            negocio.
-          </p>
-        </div>
+          <div v-show="selected === 1" class="description">
+            <img src="../assets/images/ilustrations/undraw_team.svg" alt="Software" />
+            <div class="text">
+              <h2>Software Empresarial a Medida</h2>
+              <p>
+                Soluciones escalables: desarrollo, integración de sistemas, automatización y ciberseguridad. Aplicaciones diseñadas para optimizar la operatividad de tu negocio.
+              </p>
+            </div>
+          </div>
 
-        <div v-show="selected === 2" class="description-container">
-          <img
-            src="../assets/images/ilustrations/undraw_workspace.svg"
-            alt="Administrativo"
-            class="illustration"
-          />
-          <p class="description-text">
-            Digitalización y optimización de procesos administrativos mediante ERP y herramientas de
-            gestión documental. Implementamos soluciones para mejorar la eficiencia operativa,
-            reduciendo costos y maximizando el control sobre recursos y flujos de trabajo.
-          </p>
+          <div v-show="selected === 2" class="description">
+            <img src="../assets/images/ilustrations/undraw_workspace.svg" alt="Administrativo" />
+            <div class="text">
+              <h2>Gestión Administrativa Eficiente</h2>
+              <p>
+                ERP, digitalización de procesos y control documental. Soluciones que mejoran la eficiencia operativa, reducen costos y maximizan la productividad.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -66,111 +57,143 @@ export default {
     return {
       selected: 1,
       categories: ['Hardware', 'Software', 'Administrativo'],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>
 .wrapper {
   width: 100%;
-  min-height: auto;
-  padding: 40px 20px;
+  min-height: 60vh;
+  padding: 60px 20px;
+  /* background: #f9f9f9; */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .container {
-  max-width: 900px;
+  width: 100%;
+  max-width: 1200px;
   text-align: center;
-  font-family: var(--font-family1);
+  padding: 40px;
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 500;
-  font-family: var(--font-family2);
+  font-weight: 600;
+  margin-bottom: 40px;
+  /* line-height: 1.2; */
+
+  font-size: 3.5rem;
   color: var(--color2);
-  margin-bottom: 20px;
+  font-family: var(--font-family2);
+  text-shadow: 0 0 10px rgba(229, 50, 44, 0.6);
 }
 
 .buttons {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 40px;
 }
 
 button {
-  padding: 10px 20px;
-  border: none;
+  background: transparent;
+  border: 2px solid #ccc;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 999px;
+  transition: all 0.3s ease;
   cursor: pointer;
-  background-color: #ddd;
-  border-radius: 5px;
-  transition: 0.3s;
+  font-weight: 500;
   font-family: var(--font-family1);
 }
 
 button.active {
-  background-color: var(--color2);
-  color: white;
+  background: #E5322C;
+  color: #fff;
+  border-color: #E5322C;
+  font-family: var(--font-family1);
 }
 
 button:hover {
-  background-color: #e5200c;
-  color: white;
+  border-color: #E5322C;
+  font-family: var(--font-family1);
 }
 
 .content {
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 40px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-
-/* Ajuste para centrar imágenes en pantallas grandes */
-.description-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  text-align: left;
-  flex-wrap: wrap;
-}
-
-/* Tamaño uniforme para todas las ilustraciones */
-.illustration {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Ajuste de texto */
-.description-text {
-  text-align: justify;
+  transition: all 0.5s ease;
   font-family: var(--font-family1);
-  font-size: 16px;
+}
+
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.description img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.description img:hover {
+  transform: scale(1.05);
+}
+
+.text {
   max-width: 500px;
 }
 
-/* Responsive para pantallas pequeñas */
+.text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Fade Transition */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .description-container {
+  .description {
     flex-direction: column;
     text-align: center;
   }
 
-  .illustration {
-    max-width: 250px;
+  .text {
+    max-width: 100%;
   }
 
-  .description-text {
-    max-width: 100%;
+  .title {
+    font-size: 2rem;
   }
 }
 </style>

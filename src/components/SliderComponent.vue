@@ -54,11 +54,12 @@ const logos = ref([lg1, lg2, lg3, lg4, lg5, lg6, lg7])
 }
 
 .slider-title {
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 15px;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: var(--color2);
   font-family: var(--font-family2);
+  text-shadow: 0 0 10px rgba(229, 50, 44, 0.6);
 }
 
 .slider-container {
@@ -66,10 +67,18 @@ const logos = ref([lg1, lg2, lg3, lg4, lg5, lg6, lg7])
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  min-height: 20vh;
 }
 
 .mySwiper {
   width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .mySwiper {
+    width: 80%;
+  }
 }
 
 .slide-wrapper {
@@ -85,7 +94,7 @@ const logos = ref([lg1, lg2, lg3, lg4, lg5, lg6, lg7])
   height: 120px;
   border-radius: 10px;
   background-color: var(--color1);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.10);
 }
 
 .logo-image {

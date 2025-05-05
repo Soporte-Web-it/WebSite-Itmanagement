@@ -1,28 +1,27 @@
 <template>
     <section class="HeaderWeb">
         <div class="overlay"></div>
-        <!-- <div class="content">
-            <h1 class="title">Bienvenido a Nuestra Página</h1>
-        </div> -->
+        <div class="content">
+            <h1 class="title">¡Conoce más sobre nosotros!</h1>
+        </div>
 
-        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <!-- <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffffff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,144C384,160,480,160,576,149.3C672,139,768,117,864,96C960,75,1056,53,1152,48C1248,43,1344,53,1392,58.7L1440,64L1440,320L0,320Z"></path>
             <text x="50%" y="80%" text-anchor="middle" fill="#000" font-size="40px" font-weight="bold" class="subtitleHeader">Tu Mensaje Aquí</text>
-        </svg>
+        </svg> -->
     </section>
 </template>
 
 <style scoped>
 
 .HeaderWeb {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100vh;
-    /* background-image: url('../assets/images/banners/BANNER-IT-2.jpg'); */
+    background-image: url('../assets/images/banners/bg1.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,8 +81,8 @@ html, body {
 
 @media (max-width: 768px) {
     .HeaderWeb {
-        height: 50vh;
-        background-size: contain;
+        height: 100vh;
+        background-size: cover;
         /* background-image: url('../assets/images/banners/BANNER-IT-2-LARGO.jpg'); */
         background-position: center top;
         position: relative;
