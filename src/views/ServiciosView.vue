@@ -7,8 +7,10 @@
   />
 
 
+  <SelectionComponent/>
   <ComponentPrueba/>
   <FooterComponent/>
+
 
 </template>
 
@@ -18,5 +20,6 @@ import FooterComponent from '@/components/FooterComponent.vue';
 import HeaderVistas from '@/components/HeaderVistas.vue';
 
 import banner from '@/assets/images/banners/bg2.jpg';
+import SelectionComponent from '@/components/SelectionComponent.vue';
 
 </script>

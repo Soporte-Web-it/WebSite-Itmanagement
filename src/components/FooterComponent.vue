@@ -11,9 +11,9 @@
             <img class="imageLogo" src="../assets/images/logos/IT BLANCO.png" alt="Company Logo" />
           </router-link>
         </div>
-        <p class="description">
+        <!-- <p class="description">
           Compañia prestadora de servicios administrativos e integrales
-        </p>
+        </p> -->
       </div>
 
       <!-- Navegación interna -->
@@ -44,8 +44,8 @@
       <div class="footer-section">
         <h3>Información de contacto</h3>
         <p class="itfooter">Calle 3a N° 9 - 01 San Pedro. Hobo, Huila (Colombia)</p>
-        <p class="itfooter">316 742 0491</p>
-        <p class="email"><a href="mailto:contact@example.com">recepcion@itmsas.net</a></p>
+        <p class="itfooter">316 834 9798</p>
+        <p class="email"><a href="mailto:contact@example.com">contacto@itmsas.net</a></p>
       </div>
     </div>
 

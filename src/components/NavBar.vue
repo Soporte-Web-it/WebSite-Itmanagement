@@ -7,10 +7,18 @@
     </div>
 
     <div class="containNav" v-if="!isMobile || !isMenuOpen">
-      <router-link to="/" class="itemNav"><i class='bx bx-home-alt'></i><span>Inicio</span></router-link>
-      <router-link to="/nosotros" class="itemNav"><i class='bx bx-group'></i><span>Nosotros</span></router-link>
-      <router-link to="/contacto" class="itemNav"><i class='bx bx-phone'></i><span>Contacto</span></router-link>
-      <router-link to="/servicios" class="itemNav"><i class='bx bx-server'></i><span>Servicios</span></router-link>
+      <router-link to="/" class="itemNav" active-class="navActive" exact-active-class="navActive">
+        <i class='bx bx-home-alt'></i><span>Inicio</span>
+      </router-link>
+      <router-link to="/nosotros" class="itemNav" active-class="navActive">
+        <i class='bx bx-group'></i><span>Nosotros</span>
+      </router-link>
+      <router-link to="/contacto" class="itemNav" active-class="navActive">
+        <i class='bx bx-phone'></i><span>Contacto</span>
+      </router-link>
+      <router-link to="/servicios" class="itemNav" active-class="navActive">
+        <i class='bx bx-server'></i><span>Servicios</span>
+      </router-link>
     </div>
 
     <button class="menuToggle" @click="toggleMenu" v-if="isMobile">
@@ -22,10 +30,18 @@
 
   <div class="mobileNav" :class="{ active: isMenuOpen }" v-if="isMobile">
     <button class="closeMenu" @click="toggleMenu">&times;</button>
-    <router-link to="/" class="itemNav" @click="toggleMenu"><i class='bx bx-home-alt'></i><span>Inicio</span></router-link>
-    <router-link to="/nosotros" class="itemNav" @click="toggleMenu"><i class='bx bx-group'></i><span>Nosotros</span></router-link>
-    <router-link to="/contacto" class="itemNav" @click="toggleMenu"><i class='bx bx-phone'></i><span>Contacto</span></router-link>
-    <router-link to="/servicios" class="itemNav" @click="toggleMenu"><i class='bx bx-server'></i><span>Servicios</span></router-link>
+    <router-link to="/" class="itemNav" @click="toggleMenu" active-class="navActive" exact-active-class="navActive">
+      <i class='bx bx-home-alt'></i><span>Inicio</span>
+    </router-link>
+    <router-link to="/nosotros" class="itemNav" @click="toggleMenu" active-class="navActive">
+      <i class='bx bx-group'></i><span>Nosotros</span>
+    </router-link>
+    <router-link to="/contacto" class="itemNav" @click="toggleMenu" active-class="navActive">
+      <i class='bx bx-phone'></i><span>Contacto</span>
+    </router-link>
+    <router-link to="/servicios" class="itemNav" @click="toggleMenu" active-class="navActive">
+      <i class='bx bx-server'></i><span>Servicios</span>
+    </router-link>
   </div>
 </template>
 
@@ -115,7 +131,8 @@ onUnmounted(() => {
   color: var(--color3);
 }
 
-.menuToggle, .closeMenu {
+.menuToggle,
+.closeMenu {
   display: none;
   background: none;
   border: none;
@@ -157,7 +174,7 @@ onUnmounted(() => {
 }
 
 .sectionHeader.scrolled .itemNav {
-  color: var(--color3); /* Por ejemplo, un gris oscuro o negro */
+  color: var(--color3);
 }
 
 .sectionHeader.scrolled .itemNav:hover {
@@ -169,6 +186,11 @@ onUnmounted(() => {
   color: var(--color2);
 }
 
+.navActive {
+  color: var(--color2);
+  /* font-weight: bold; */
+  border-bottom: 2px solid var(--color2);
+}
 
 @media (max-width: 1024px) {
   .containNav {
@@ -195,4 +217,3 @@ onUnmounted(() => {
   }
 }
 </style>
-

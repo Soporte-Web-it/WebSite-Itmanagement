@@ -10,8 +10,6 @@
   <AccordionComponent/>
   <PoliticsComponent/>
 
-  <DownloadComponent/>
-
   <FooterComponent/>
 
 </template>
@@ -23,7 +21,6 @@ import ServicesCardsComponent from '@/components/ServicesCardsComponent.vue';
 import AccordionComponent from '@/components/AccordionComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 import PoliticsComponent from '@/components/PoliticsComponent.vue';
-import DownloadComponent from '@/components/DownloadComponent.vue';
 
 // Importación de backgrounds
 import banner from '@/assets/images/banners/bg4.jpg';

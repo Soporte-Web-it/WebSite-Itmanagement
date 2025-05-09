@@ -59,7 +59,7 @@ const logos = ref([lg1, lg2, lg3, lg4, lg5, lg6, lg7])
   font-size: 3.5rem;
   color: var(--color2);
   font-family: var(--font-family2);
-  text-shadow: 0 0 10px rgba(229, 50, 44, 0.6);
+  /* text-shadow: 0 0 10px rgba(229, 50, 44, 0.6); */
 }
 
 .slider-container {

@@ -2,36 +2,39 @@
   <div class="video-background-component">
     <!-- Contenedor para video con overlay -->
     <div class="video-container">
-
       <div class="overlay"></div>
 
       <video autoplay loop muted>
         <source src="../assets/videos/bgThree.mp4" type="video/mp4" />
       </video>
-
     </div>
 
     <!-- Contenedor principal para centrar el contenido -->
     <div class="content-container" data-aos="fade-up">
       <!-- Contenedor para imagen -->
       <div class="image-container">
-        <img class="ilustration" src="../assets/images/ilustrations/undraw_real-time-analytics_xu2g.svg" alt="Imagen" />
+        <img
+          class="ilustration"
+          src="../assets/images/ilustrations/undraw_real-time-analytics_xu2g.svg"
+          alt="Imagen"
+        />
       </div>
 
       <!-- Contenedor para el texto y título -->
       <div class="text-container">
-        <h1 class="title-videoComponent">IT MANAGEMENT ZOMAC S.A.S</h1>
+        <h1 class="title-videoComponent">IT MANAGEMENT</h1>
         <p>
-          Empresa que desarrolla actividades conjuntas que permitan
-          al grupo empresarial M.O.M garantizar la continuidad de su desarrollo en los cuales
-          intervienen los procesos gerenciales, contables, financieros, jurídicos, ingeniería y
-          talento, sirviendo como apoyo en las operaciones administrativas y asistenciales.
+          Compañía que desarrolla actividades transversales a los procesos misionales de nuestros
+          clientes, permitiéndoles garantizar la continuidad de su negocio. Nuestro quehacer
+          involucra procesos gerenciales, contables, financieros, jurídicos, seguridad y salud en el
+          trabajo, ingeniería y talento humano, brindando apoyo en las operaciones administrativas y
+          asistenciales, estas ultimas enfocadas a nuestros clientes del sector salud.
 
-          <br>
+          <br />
 
-          De igual forma IT MANAGMENT ZOMAC S.A.S busca desarrollar y/o actualizar los sistemas y procesos que
-          soportan las áreas asistenciales y administrativas en las nuevas unidades de negocios y
-          centros de operación.
+          De igual forma IT MANAGEMENT busca desarrollar y/o actualizar los sistemas y procesos que
+          soportan las áreas asistenciales y administrativas en las nuevas unidades de negocio y
+          centros de operación
         </p>
       </div>
     </div>
@@ -167,6 +170,5 @@ export default {
     justify-content: center;
     text-align: center;
   }
-  
 }
 </style>

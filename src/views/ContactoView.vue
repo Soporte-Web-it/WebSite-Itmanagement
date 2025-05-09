@@ -1,7 +1,7 @@
 <template>
 
   <HeaderVistas
-    titulo="¿En qué podemos ayudarte?"
+    titulo="¡ En IT MANAGEMENT servimos con el alma !"
     subtitulo="Vive la experiencia con nueva tecnología e innovación"
     :imagenFondo="banner"
   />

@@ -40,7 +40,7 @@ const toggleTheme = () => {
 };
 
 const handleBlur = () => {
-  document.title = "¿Ya te vas?";
+  document.title = "¿Ya te vas? 😲";
 };
 
 const handleFocus = () => {

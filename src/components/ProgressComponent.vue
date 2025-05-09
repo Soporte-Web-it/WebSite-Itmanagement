@@ -40,7 +40,7 @@
 
     <div class="div1" data-aos="fade-left">
       <img
-        src="../assets/images/ilustrations/undraw_ideas-flow.svg"
+        src="../assets/images/ilustrations/bull-market_4a8e.svg"
         alt="Illustration"
         class="illustration"
       />
@@ -116,11 +116,12 @@ onUnmounted(() => {
   gap: 10%; /* Espacio entre los contenedores */
   padding: 30px;
   flex-wrap: wrap;
+  min-height: 60vh;
 }
 
 /* Ajustes de la imagen */
 .div1 img {
-  max-width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 10px;
 }
@@ -137,7 +138,7 @@ onUnmounted(() => {
   margin-bottom: 20px;
   font-family: var(--font-family2);
   color: var(--color2);
-  text-shadow: 0 0 10px rgba(229, 50, 44, 0.6);
+  /* text-shadow: 0 0 10px rgba(229, 50, 44, 0.6); */
 }
 
 .description {

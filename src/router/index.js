@@ -4,7 +4,6 @@ import NosotrosView from '@/views/NosotrosView.vue';
 import ContactoView from '@/views/ContactoView.vue';
 import ServiciosView from '@/views/ServiciosView.vue';
 
-
 const routes = [
   { path: '/', component: InicioView },
   { path: '/nosotros', component: NosotrosView },
@@ -14,7 +13,10 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior() {
+    return { top: 0 }; // Scroll siempre inicia desde 0
+  }
 });
 
 export default router;
