@@ -20,7 +20,13 @@
           <label class="form-label">Email:</label>
           <input type="email" v-model="form.email" class="form-input" required />
           <label class="form-label">Teléfono:</label>
-          <input type="number" v-model="form.telefono" class="form-input" required />
+          <input
+            type="tel"
+            v-model="form.telefono"
+            class="form-input"
+            required
+            @input="soloNumeros"
+          />
           <label class="form-label">Comentario:</label>
           <textarea v-model="form.comentario" class="form-input" required></textarea>
 
@@ -72,10 +78,10 @@
         <p>
           Para tales efectos, el titular del dato personal o quien ejerza su representación podrá
           enviar su petición, queja o reclamo de lunes a viernes de 8:00 a.m. a 5:00 p.m. al correo
-          electrónico <strong>contacto@itmsas.net</strong>, llamar a la línea telefónica en
-          Neiva <strong>316 834 9798</strong>, o radicarla en la siguiente dirección
-          <strong>Carrera 6 N° 19 - 29, Barrio Quirinal</strong>, correspondientes a la sede administrativa de
-          la empresa.
+          electrónico <strong>contacto@itmsas.net</strong>, llamar a la línea telefónica en Neiva
+          <strong>316 834 9798</strong>, o radicarla en la siguiente dirección
+          <strong>Carrera 6 N° 19 - 29, Barrio Quirinal</strong>, correspondientes a la sede
+          administrativa de la empresa.
         </p>
         <button class="modal-close" @click="mostrarPolitica = false">Cerrar</button>
       </div>
@@ -100,33 +106,36 @@ export default {
   },
 
   methods: {
+    soloNumeros(event) {
+      // Elimina todo lo que no sea número
+      this.form.telefono = this.form.telefono.replace(/\D/g, '')
+    },
 
     async enviarFormulario() {
       if (!this.form.politicas) {
-        this.mensaje = 'Debes aceptar las políticas de privacidad.';
-        return;
+        this.mensaje = 'Debes aceptar las políticas de privacidad.'
+        return
       }
 
       try {
-        const response = await fetch('https://itmsas.net/enviar_formulario.php', {
+        const response = await fetch('https://itmsas.net/formulario-itm/enviar_formulario.php', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: new URLSearchParams(this.form).toString(),
-        });
+        })
 
-        const data = await response.json();
+        const data = await response.json()
 
         if (response.ok) {
-          this.mensaje = data.message || 'Formulario enviado correctamente';
+          this.mensaje = data.message || 'Formulario enviado correctamente'
         } else {
-          this.mensaje = `Error: ${data.message || 'Hubo un problema al enviar el formulario.'}`;
+          this.mensaje = `Error: ${data.message || 'Hubo un problema al enviar el formulario.'}`
         }
       } catch (error) {
-        console.error("Error en el fetch:", error);
-        this.mensaje = 'Error al enviar el formulario. Por favor, intenta nuevamente.';
+        console.error('Error en el fetch:', error)
+        this.mensaje = 'Error al enviar el formulario. Por favor, intenta nuevamente.'
       }
-    }
-
+    },
   },
 }
 </script>
